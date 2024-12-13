@@ -36,18 +36,18 @@ class Monster(Character):
         target.health += 50
         print(f"{self.name} roars and gains 50 health.")
         
-warrior = Warrior("Warrior", 200, 10)
-mage = Mage("Mage", 100, 20)
-archer = Archer("Archer", 50, 15)
+judea = Warrior("Judea", 200, 10)
+umi = Mage("Umi", 100, 20)
+nel = Archer("Nel", 50, 15)
 mnstr = Monster("Monster", 150, 20)
 
-characters = [warrior, mage, archer]
+characters = [judea, umi, nel]
 
 while True:
-    for attacker in characters:
-        attacker.attack(mnstr)
-        attacker.special_move(monster)
-        mnstr.defend(attacker)
+    for judea in characters:
+        judea.attack(mnstr)
+        judea.special_move(mnstr)
+        mnstr.defend(judea)
 
         if mnstr.health <= 0:
             print("Monster defeated!")
